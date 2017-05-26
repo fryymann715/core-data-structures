@@ -77,39 +77,4 @@ describe( 'Set', () => {
         })
       })
   })
-
-  describe( 'Takes two sets as arguments', () => {
-
-    const setA = new Set([ 1, 2, 3, 5 ])
-    const setB = new Set([ 2, 4, 5 ])
-    const setC = new Set([ 2, 5 ])
-
-      context( 'setA.union( setB )', () => {
-        it( 'returns a new set with the combined values of the originals.', () => {
-          expect( setA.union( setB ) ).to.eql([ 1, 2, 3, 4, 5 ])
-        })
-      })
-
-      context( 'setA.intersect( setB )', () => {
-        it( 'returns a new set with the shared values of the originals.', () => {
-          expect( setA.intersect( setB ) ).to.eql([ 2, 5 ])
-        })
-      })
-
-      context( 'setA.difference( setB )', () => {
-        it( 'returns a new set with values contained in setA but not setB.', () => {
-          expect( setA.difference( setB ) ).to.eql([ 1, 3 ])
-          expect( setB.difference( setA ) ).to.eql([ 4 ])
-        })
-      })
-
-      context( 'setB.isSubset( setA )', () => {
-        it( 'returns true if setB is only has values found in setA.', () => {
-          expect( setC.isSubset( setA ) ).to.be.true
-        })
-        it( 'returns false if setB contains values not found in setA.', () =>{
-          expect( setB.isSubset( setA ) ).to.be.false
-        })
-      })
-  })
 })
