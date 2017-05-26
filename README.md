@@ -6,9 +6,5 @@ Base repository for the [Core Data Structures](https://github.com/GuildCrafts/we
 
 ## Installation and Setup
 
-clone repository and run npm install.
-'npm run test' will run the tests
-
-## Usage and Examples
-
-_...and this_
+clone the repo
+run setup.sh
