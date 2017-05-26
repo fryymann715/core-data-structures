@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
-    "test": "nyc mocha --compilers js:babel-register --inline-diffs ./spec/*.js && ava",
+    "test": "mocha --compilers js:babel-register --inline-diffs ./spec/*.js && ava ; ava",
     "test-hash": "cd python/spec ; ./testHash.sh && cd ../.."
   },
   "dependencies": {
